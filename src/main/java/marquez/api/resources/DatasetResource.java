@@ -59,7 +59,7 @@ public final class DatasetResource {
   @Path("/namespaces/{namespace}/datasets")
   @Produces(APPLICATION_JSON)
   public Response list(
-      @PathParam("namespace") String namespaceString,
+      @PathParam("namespace") NamespaceName namespaceString,
       @QueryParam("limit") @DefaultValue("100") Integer limit,
       @QueryParam("offset") @DefaultValue("0") Integer offset)
       throws MarquezServiceException, WebApplicationException {
